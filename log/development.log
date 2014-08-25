@@ -1,0 +1,394 @@
+  [1m[36m (14.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (8.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePosts (20140825021156)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "posts" ("id" serial primary key, "title" character varying(255), "body" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140825021156"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-24 21:22:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/caseyryan/.rvm/gems/ruby-2.0.0-p451/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 19ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-24 21:22:46 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/caseyryan/.rvm/gems/ruby-2.0.0-p451/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-24 21:22:47 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/caseyryan/.rvm/gems/ruby-2.0.0-p451/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-08-24 21:23:21 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 458ms (Views: 455.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-24 21:23:21 -0500
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-24 21:23:21 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-24 21:23:21 -0500
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-24 21:23:21 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-24 21:23:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-24 21:23:21 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-24 21:23:21 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-24 21:23:21 -0500
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-08-24 21:29:41 -0500
+Processing by PostsController#new as HTML
+Completed 500 Internal Server Error in 2ms
+
+RuntimeError (`attr_accessible` is extracted out of Rails into a gem. Please use new recommended protection model for params(strong_parameters) or add `protected_attributes` to your Gemfile to use old one.):
+  app/models/post.rb:3:in `<class:Post>'
+  app/models/post.rb:1:in `<top (required)>'
+  app/controllers/posts_controller.rb:17:in `new'
+
+
+  Rendered /Users/caseyryan/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/caseyryan/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/caseyryan/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/caseyryan/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-08-24 21:29:41 -0500
+Processing by PostsController#new as HTML
+Completed 500 Internal Server Error in 2ms
+
+RuntimeError (`attr_accessible` is extracted out of Rails into a gem. Please use new recommended protection model for params(strong_parameters) or add `protected_attributes` to your Gemfile to use old one.):
+  app/models/post.rb:3:in `<class:Post>'
+  app/models/post.rb:1:in `<top (required)>'
+  app/controllers/posts_controller.rb:17:in `new'
+
+
+  Rendered /Users/caseyryan/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/caseyryan/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/caseyryan/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/caseyryan/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.6ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-08-24 21:29:56 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (49.7ms)
+  Rendered posts/new.html.erb within layouts/application (53.6ms)
+Completed 200 OK in 63ms (Views: 58.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-24 21:29:56 -0500
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-24 21:29:56 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-24 21:29:56 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-24 21:29:56 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-24 21:29:56 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-24 21:29:56 -0500
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-24 21:29:56 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-24 21:29:56 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-08-24 21:30:01 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-24 21:30:01 -0500
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-24 21:30:01 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-24 21:30:01 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-24 21:30:01 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-24 21:30:01 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-24 21:30:01 -0500
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-24 21:30:01 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-24 21:30:01 -0500
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-08-24 21:30:02 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (2.2ms)
+  Rendered posts/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-08-24 21:30:21 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sih+xv55prudUfzQWRU+dTK+c1GVxSwqZiGO1PywKjU=", "post"=>{"title"=>"First Rails App", "body"=>"Hi this is my first Rails App!"}, "commit"=>"Create Post"}
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (10.9ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Hi this is my first Rails App!"], ["created_at", Mon, 25 Aug 2014 02:30:21 UTC +00:00], ["title", "First Rails App"], ["updated_at", Mon, 25 Aug 2014 02:30:21 UTC +00:00]]
+  [1m[35m (6.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 24ms (ActiveRecord: 17.7ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-08-24 21:30:21 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-24 21:30:21 -0500
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-24 21:30:21 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-24 21:30:21 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-24 21:30:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-24 21:30:21 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-24 21:30:21 -0500
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-24 21:30:21 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-24 21:30:21 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-08-24 21:30:24 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-08-24 21:30:28 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (2.1ms)
+  Rendered posts/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-08-24 21:30:37 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sih+xv55prudUfzQWRU+dTK+c1GVxSwqZiGO1PywKjU=", "post"=>{"title"=>"Woah", "body"=>"This is cool!!"}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["body", "This is cool!!"], ["created_at", Mon, 25 Aug 2014 02:30:37 UTC +00:00], ["title", "Woah"], ["updated_at", Mon, 25 Aug 2014 02:30:37 UTC +00:00]]
+  [1m[36m (6.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 9ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2014-08-24 21:30:37 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "2"]]
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-24 21:30:37 -0500
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-24 21:30:37 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-24 21:30:37 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-24 21:30:37 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-24 21:30:37 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-24 21:30:37 -0500
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-24 21:30:37 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-24 21:30:37 -0500
+
+
+Started GET "/posts/2/edit" for 127.0.0.1 at 2014-08-24 21:30:39 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered posts/_form.html.erb (2.1ms)
+  Rendered posts/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-08-24 21:30:41 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2014-08-24 21:30:43 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-08-24 21:30:46 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/posts/1" for 127.0.0.1 at 2014-08-24 21:32:15 -0500
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sih+xv55prudUfzQWRU+dTK+c1GVxSwqZiGO1PywKjU=", "id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 1]]
+  [1m[35m (6.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 11ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-08-24 21:32:15 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-24 21:32:15 -0500
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-24 21:32:15 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-24 21:32:15 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-24 21:32:15 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-24 21:32:15 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-24 21:32:15 -0500
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-24 21:32:15 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-24 21:32:15 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-08-24 22:14:31 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 101ms (Views: 86.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-24 22:14:32 -0500
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-24 22:14:32 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-24 22:14:32 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-24 22:14:32 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-24 22:14:32 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-24 22:14:32 -0500
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-24 22:14:32 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-24 22:14:32 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-08-24 22:14:33 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-24 22:14:33 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-24 22:14:33 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-24 22:14:33 -0500
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-24 22:14:33 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-24 22:14:33 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-24 22:14:33 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-24 22:14:33 -0500
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-24 22:14:33 -0500
